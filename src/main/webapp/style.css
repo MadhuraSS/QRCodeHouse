@@ -90,13 +90,13 @@ table {
 .leftHalf {
 	float: left;
 	background-color: #26343f;
-	width: 45%;
+	width: 50%;
 	height: 100%;
 }
 
 .rightHalf {
 	float: right;
-	width: 55%;
+	width: 50%;
 	background-color: #313f4a;
 	height: 100%;
 }
@@ -162,7 +162,7 @@ button {
 	top: 0px;
 	background: none;
 	border: none;
-	cursor: pointer;s
+	cursor: pointer;
 }
 
 .addBtn {
@@ -173,6 +173,40 @@ button {
 	border: none;
 	cursor: pointer;
 }
+
+.GenerateBtn {
+	position: absolute;
+	background: none;
+	border: none;
+	cursor: pointer;
+bottom:6%;
+top:3%;
+	right:15%;
+}
+
+.ClearBtn {
+	position: absolute;
+		top: 6%;
+		bottom: 3%;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+.textbox {
+	height: 1.2em;
+	font-size: 1em;
+	resize: none;
+	width: 100%;
+	border: none;
+	background-color: transparent;
+	color: #fff;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: .9em;
+	padding:8px;
+}
+
 
 .detailBtn img,.addBtn img {
 	
@@ -201,4 +235,18 @@ button {
 
 .fieldname {
 	text-align: right;
+}
+
+
+.QRCode {
+align:"center"; 
+padding-bottom: 10px;
+padding-top: 100px;
+padding-left: 10%;
+}
+.QRCodeElement {
+align:"center"; 
+padding-bottom: 10px;
+padding-top: 10px;
+padding-left: 30%;
 }

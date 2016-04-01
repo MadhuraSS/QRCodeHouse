@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script type="text/javascript" src="qrcode.js"></script>
+<title>QR Code House</title>
+</head>
+<body>
+<div id="title" align="center" style="margin-bottom: 200px">
+	<h1>QR Code House</h1>
+</div>
+<div id="QRCode" align="center" style="background-color: #551a8b; padding-bottom: 100px; padding-top: 100px">
+	<input type="text" name="input_string" id="input_string_id" placeholder="Enter String to Generate QR Code">
+	<input type="button" value="Generate" onclick="generateQR()" name="go" id="go_id">
+	<br>
+	<div id="qrcode" style="width:100px; height:100px; margin-top:15px;"></div>
+</div>
+<script type="text/javascript" src="util.js"></script> <script
+					type="text/javascript" src="qrCodeHouse.js"></script>
+</body>
+</html>

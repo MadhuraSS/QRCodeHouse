@@ -1,33 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Team 1--QR Code Generator</title>
+<!--Author - Narasa Kumar-->
+<title>QR Code Generator</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport"
 	content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <link rel="stylesheet" href="style.css" />
+<script type="text/javascript" src="qrcode.js"></script>
 </head>
 <body >
-
-	<div class = "leftHalf">
+<!--	<div class = "leftHalf">
 <img class = "newappIcon" src="images/newapp-icon.png" />
 				<h1>
 					Welcome to the <span class="blue">Java DB Web Starter</span> on Bluemix!
 				</h1>
 				<p class = "description">Get started by reading our <a href = "https://www.ng.bluemix.net/docs/#starters/liberty/index.html#liberty">Java documentation</a> or use the Start Coding guide under your app in your dashboard.</p>
 	</div>
-	<div class = "rightHalf">
+	
+-->
+
+<div class = "leftHalf">
+<div class="center">
+
+<div id="QRCode" class="QRCode">
+
+<table> 
+<tr><td>
+<input class="textbox" type="text" name="input_string" id="input_string_id" placeholder="Enter String to Generate QR Code">
+</td>
+
+<td>
+ <button class="GenerateBtn" onclick="generateQR()" title='Generate'>
+							<img src='images/generateButton.png' alt='Generate' />
+	</button>
+</td>
+
+</tr>
+<tr><td>
+
+</td></tr>
+	
+	
+	<!--
+	<input type="button" value="Generate" onclick="generateQR()" name="go" id="go_id">-->
+	
+	 </table>
+	
+	<br>
+</div>
+	<div id="qrcode" class="QRCodeElement"></div>
+	
+</div>
+
+</div>
+
+<div class = "rightHalf">
+
+
+
 	<div class = "center">
 	<header>
 					<div class='title'>
-						Java DB Web Starter
-						<button class='detailBtn' onclick="toggleServiceInfo()"
+						Recent History
+						<!-- <button class='detailBtn' onclick="toggleServiceInfo()"
 							title='toggle service info'>
 							<img src='images/detail.png' alt='detail' />
 						</button>
+						 -->
+						 
+						 <button class="ClearBtn" onclick="deleteItemAll()" title='Clear All'>
+							<img src='images/ClearAll.png' alt='Clear All' />
+						</button>
+						 
+<!--						 <input type="button" value="Clear All" onclick="deleteItemAll()" name="ClearAll" id="Clear">-->
+
 					</div>
 				</header>
+				
+				
+				<table id='notes' class='records'><tbody></tbody></table>
+				<div id="loading">&nbsp;&nbsp;Please wait while the database is being initialized ...</div>
+				
+				<!--
+				<footer>
+					<div class='tips'>
+						Click the Add button to add a record.
+						<button class='addBtn' onclick="addItem()" title='add record'>
+							<img src='images/add.png' alt='add' />
+						</button>
+					</div>
+					
+					<hr><hr><hr>
+					
+					<div>
+						<a href = "/QRCodeHouse.html">QR Code House</a>
+					</div>
+				</footer> -->
+				
 				<section id='dbserviceinfo' style='display: none;'>
 					<table class = "todolist">
 						<tbody>
@@ -62,17 +133,13 @@
 						</tbody>
 					</table>
 				</section>
-				<table id='notes' class='records'><tbody></tbody></table>
-				<div id="loading">&nbsp;&nbsp;Please wait while the database is being initialized ...</div>
-				<footer>
-					<div class='tips'>
-						Click the Add button to add a record.
-						<button class='addBtn' onclick="addItem()" title='add record'>
-							<img src='images/add.png' alt='add' />
-						</button>
-					</div>
-				</footer> <script type="text/javascript" src="util.js"></script> <script
-					type="text/javascript" src="index.js"></script>
+				
+				
+				
+				<script type="text/javascript" src="util.js"></script> 
+				<script type="text/javascript" src="index.js"></script>
+				<!--<script	type="text/javascript" src="qrCodeHouse.js"></script>-->
+
 					
 					</div>
 </div>
