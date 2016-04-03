@@ -52,7 +52,7 @@ function addItem(item, isNew){
 		alert('row.childNodes[0].childNodes[0]'+row.childNodes[0].childNodes[0]);
 		alert('row.childNodes[0].childNodes[1]'+row.childNodes[0].childNodes[1]);
 	*/			
-			row.innerHTML = "<td style='width:90%'><textarea  onblur='saveChange(this)'>"+elText.value+"</textarea></td>" +
+			row.innerHTML = "<td style='width:90%'><textarea  onclick='fetchQRCode(this)' onblur='saveChange(this)'>"+elText.value+"</textarea></td>" +
 							"<td class='deleteBtn' onclick='deleteItem(this)' title='delete this'></td>";
 		
 			//var textarea=row.childNodes[0].childNodes[0];
@@ -235,6 +235,12 @@ function updateServiceInfo(){
 	}, function(err){
 		console.error(err);
 	});
+}
+
+function fetchQRCode(stringTextArea) {
+	alert(stringTextArea.value);
+	alert(stringTextArea.innerText);
+	alert(stringTextArea.innerHTML);
 }
 
 function generateQR() {
