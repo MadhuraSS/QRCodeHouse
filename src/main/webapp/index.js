@@ -38,7 +38,7 @@ function addItem(item, isNew){
 	//row.innerHTML = "<td style='width:90%'><textarea onchange='saveChange(this)' onkeydown='onKey(event)'></textarea></td>" +
 	//	"<td class='deleteBtn' onclick='deleteItem(this)' title='delete me'></td>";
 	
-	row.innerHTML = "<td style='width:90%'><textarea></textarea></td>" +
+	row.innerHTML = "<td style='width:90%'><textarea onclick='fetchQRCode(this)'></textarea></td>" +
 		"<td class='deleteBtn' onclick='deleteItem(this)' title='delete this'></td>";
 //onclick='makeCodeFromSelect(this)'
 
@@ -238,9 +238,8 @@ function updateServiceInfo(){
 }
 
 function fetchQRCode(stringTextArea) {
-	alert(stringTextArea.value);
-	alert(stringTextArea.innerText);
-	alert(stringTextArea.innerHTML);
+	document.getElementById('input_string_id').value = stringTextArea.value;
+	generateQR();
 }
 
 function generateQR() {
