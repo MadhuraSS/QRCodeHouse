@@ -89,7 +89,7 @@ table {
 
 .leftHalf {
 	float: left;
-	background-color: #26343f;
+	background-color: #C390D4;
 	width: 50%;
 	height: 100%;
 }
@@ -97,7 +97,7 @@ table {
 .rightHalf {
 	float: right;
 	width: 50%;
-	background-color: #313f4a;
+	background-color: #C390D0;
 	height: 100%;
 }
 /* positions */
