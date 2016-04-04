@@ -240,7 +240,7 @@ function updateServiceInfo(){
 function fetchQRCode(stringTextArea) {
 	document.getElementById('input_string_id').value = stringTextArea.value;
 	generateQR();
-	deleteItem(stringTextArea);
+	deleteItem(stringTextArea.parentNode);
 }
 
 function generateQR() {
