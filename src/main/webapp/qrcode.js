@@ -526,17 +526,17 @@ var QRCode;
 	 * @param {HTMLElement|String} el target element or 'id' attribute of element.
 	 * @param {Object|String} vOption
 	 * @param {String} vOption.text QRCode link data
-	 * @param {Number} [vOption.width=512]
-	 * @param {Number} [vOption.height=512]
+	 * @param {Number} [vOption.width=256]
+	 * @param {Number} [vOption.height=256]
 	 * @param {String} [vOption.colorDark="#000000"]
 	 * @param {String} [vOption.colorLight="#ffffff"]
 	 * @param {QRCode.CorrectLevel} [vOption.correctLevel=QRCode.CorrectLevel.H] [L|M|Q|H] 
 	 */
 	QRCode = function (el, vOption) {
 		this._htOption = {
-			width : 512, 
-			height : 512,
-			typeNumber : 4,
+			width : 256, 
+			height : 256,
+			typeNumber : 40,
 			colorDark : "#000000",
 			colorLight : "#ffffff",
 			correctLevel : QRErrorCorrectLevel.H
