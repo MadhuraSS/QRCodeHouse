@@ -11,13 +11,13 @@ function loadItems(){
 		var items = [];
 		var i;
 		// Make sure the received items have correct format
-		for(i = receivedItems.length; i > 0 ; --i){
+		for(i = receivedItems.length - 1; i >= 0 ; --i){
 			var item = receivedItems[i];
 			if(item && 'id' in item && 'name' in item){
 				items.push(item);
 			}
 		}
-		for(i = items.length; i > 0; --i){
+		for(i = 0; i < items.length; ++i){
 			addItem(items[i], false);
 		}
 	}, function(err){
@@ -247,12 +247,14 @@ function generateEnterKey(e) {
 	var code = e.keyCode ? e.keyCode : e.which;
 	if(code == 13) { //Enter keycode
 		makeCode();
+		document.getElementById('input_string_id').focus();
 	}
 }
 
 function generateQR() {
 	//	alert('generateQR() method');
 	makeCode();
+	document.getElementById('input_string_id').focus();
 }
 
 var qrcode = new QRCode(document.getElementById("qrcode"), {
