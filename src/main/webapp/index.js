@@ -11,13 +11,13 @@ function loadItems(){
 		var items = [];
 		var i;
 		// Make sure the received items have correct format
-		for(i = 0; i < receivedItems.length; ++i){
+		for(i = receivedItems.length; i > 0 ; --i){
 			var item = receivedItems[i];
 			if(item && 'id' in item && 'name' in item){
 				items.push(item);
 			}
 		}
-		for(i = 0; i < items.length; ++i){
+		for(i = items.length; i > 0; --i){
 			addItem(items[i], false);
 		}
 	}, function(err){
@@ -241,6 +241,13 @@ function fetchQRCode(stringTextArea) {
 	document.getElementById('input_string_id').value = stringTextArea.value;
 	generateQR();
 	deleteItem(stringTextArea.parentNode);
+}
+
+generateEnterKey(e) {
+	var code = e.keyCode ? e.keyCode : e.which;
+	if(code == 13) { //Enter keycode
+		makeCode();
+	}
 }
 
 function generateQR() {
