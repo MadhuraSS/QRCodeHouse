@@ -64,9 +64,9 @@ function addItem(item, isNew){
 		
 	row.childNodes[0].childNodes[0].readOnly=true;	
 	
-	var table = document.getElementById('notes');
-	console.log(table.lastChild);
-	table.lastChild.appendChild(row);
+	var table = document.getElementById('codes');
+	console.log(table.firstChild);
+	table.firstChild.appendChild(row);
 	var textarea = row.firstChild.firstChild;
 	if(item){
 		textarea.value = item.name;
@@ -86,7 +86,7 @@ function deleteItem(deleteBtnNode){
 
 function deleteItemAll(){
 	
-		var table = document.getElementById("notes");
+		var table = document.getElementById("codes");
 		
 		//alert('table.rows.length='+table.rows.length);
 		var noOfRows=table.rows.length;
@@ -248,6 +248,7 @@ function generateEnterKey(e) {
 	if(code == 13) { //Enter keycode
 		makeCode();
 		document.getElementById('input_string_id').focus();
+		document.getElementById('input_string_id').select();
 	}
 }
 
@@ -255,6 +256,7 @@ function generateQR() {
 	//	alert('generateQR() method');
 	makeCode();
 	document.getElementById('input_string_id').focus();
+	document.getElementById('input_string_id').select();
 }
 
 var qrcode = new QRCode(document.getElementById("qrcode"), {
