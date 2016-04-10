@@ -243,7 +243,7 @@ function fetchQRCode(stringTextArea) {
 	deleteItem(stringTextArea.parentNode);
 }
 
-generateEnterKey(e) {
+function generateEnterKey(e) {
 	var code = e.keyCode ? e.keyCode : e.which;
 	if(code == 13) { //Enter keycode
 		makeCode();
