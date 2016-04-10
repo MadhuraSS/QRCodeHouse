@@ -11,7 +11,7 @@ function loadItems(){
 		var items = [];
 		var i;
 		// Make sure the received items have correct format
-		for(i = receivedItems.length - 1; i >= 0 ; --i){
+		for(i = 0; i < receivedItems.length ; ++i){
 			var item = receivedItems[i];
 			if(item && 'id' in item && 'name' in item){
 				items.push(item);
@@ -66,7 +66,8 @@ function addItem(item, isNew){
 	
 	var table = document.getElementById('codes');
 	console.log(table.firstChild);
-	table.firstChild.appendChild(row);
+//	table.firstChild.appendChild(row);
+	table.firstChild.insertBefore(row, table.firstChild.childNodes[0]);
 	var textarea = row.firstChild.firstChild;
 	if(item){
 		textarea.value = item.name;
